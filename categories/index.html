@@ -174,7 +174,7 @@
   
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+      <i id="searchIcon" class="fas fa-search" title="站内搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
 </ul>
@@ -401,7 +401,7 @@
         <div class="brand">
             <div class="title center-align">
                 
-                南方有佳人
+                Sky.Jiang
                 
             </div>
 
@@ -413,7 +413,7 @@
                     var typed = new Typed("#subtitle", {
                         strings: [ 
                             
-                                "如果有梦，从不觉得的追梦是苦",
+                                "如果有梦，从不觉得追梦是苦",
                             
                                 "If you have a dream, you will never find it hard to pursue it",
                             
@@ -450,7 +450,7 @@
     <div class="card">
         <div class="card-content">
             <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;Post Categories
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章类别
             </div>
             <div class="tag-chips">
                 
@@ -494,7 +494,7 @@
     let option = {
         title: {
             left: 'center',
-            text: 'Post Categories Radar Chart',
+            text: '文章分类雷达',
             textStyle: {
                 fontWeight: 500,
                 fontSize: 22
@@ -519,7 +519,7 @@
             data : [
                 {
                     value : [1],
-                    name : 'Number of Categories'
+                    name : '类别数量'
                 }
             ]
         }]
@@ -591,20 +591,29 @@
     
 
     <div class="container row center-align"
-         style="margin-bottom: 0px !important;">
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
                 <span id="year">2021</span>
             
+            <span>-</span>
             <span id="year">2021</span>
-            <a href="/about" target="_blank">Sky.Jiang</a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <a href="/about" target="_blank" style='color:#fc5938;'>Sky.Jiang</a>
+            &nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank" style='color:#fc5938;'>Hexo</a>
+            &nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" style='color:#fc5938;'>Matery</a>
             <br>
+            <div>
+                <span><span style='color:#fc5938;'>Cloud storage</span> service and <span style='color:#fc5938;'>CDN</span> acceleration provider</span>
+                <!-- 又拍云的位置 -->
+                <a href="https://www.upyun.com/" target="_blank" title="本站CDN加速/云存储由又拍云提供"> 
+                    <img src="/youpaiyun.png" style="width:7%;vertical-align:middle;" />
+                </a>
+            </div>
             
-                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">74</span>
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;
+                Total Words:&nbsp;
+                <span style='color:#fc5938;'>74</span>
             
             
             
@@ -612,65 +621,127 @@
             
             
                 <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
-                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+                &nbsp;|&nbsp;<i class="far fa-eye" ></i>&nbsp;Total visits:&nbsp;
+                    <span id="busuanzi_value_site_pv" style='color:#fc5938;'></span>
             </span>
             
             
                 <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
-                    <span id="busuanzi_value_site_uv" class="white-color"></span>
-            </span>
+                    &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                        <span id="busuanzi_value_site_uv" style='color:#fc5938;'></span>
+                </span>
             
             <br>
-
             <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var siteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2021";    // 2021
+                        var startMonth = "6";  // 6
+                        var startDate = "18";  // 18
+                        var startHour = "0";    // 0
+                        var startMinute = "0";  // 0
+                        var startSecond = "0";  // 0
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+                        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+                        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+
+                        if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "The site has been running for " + "<span style='color:#fc5938;'>"+diffDays+"</span>" + " days " + "<span style='color:#fc5938;'>"+diffHours+"</span>" +
+                                " hours " + "<span style='color:#fc5938;'>"+diffMinutes+"</span>" + " minutes " + "<span style='color:#fc5938;'>"+diffSeconds+"</span>" + " seconds";
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            document.getElementById("sitetime").innerHTML = "The site has been running for " + "<span style='color:#fc5938;'>"+diffYears+"</span>" + " years " + "<span style='color:#fc5938;'>"+diffDays+"</span>" +
+                                " days " + "<span style='color:#fc5938;'>"+diffHours+"</span>" + " hours " + "<span style='color:#fc5938;'>"+diffMinutes+"</span>" + " minutes " +"<span style='color:#fc5938;'>"+ diffSeconds+"</span>" + " seconds";
+                        }
+                        
+
+
+                        // // 区分是否有年份.
+                        // var language = 'en';
+                        // if (startYear === String(todayYear)) {
+                        //     document.getElementById("year").innerHTML = todayYear;
+                        //     var daysTip = 'This site has been running for ' + diffDays + ' days';
+                        //     if (language === 'zh-CN') {
+                        //         daysTip = '本站已运行 ' + diffDays + ' 天';
+                        //     } else if (language === 'zh-HK') {
+                        //         daysTip = '本站已運行 ' + diffDays + ' 天';
+                        //     }
+                        //     document.getElementById("sitetime").innerHTML = daysTip;
+                        // } else {
+                        //     document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        //     var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                        //         + diffDays + ' days' + diffMinutes + 'minutes' + diffSeconds + 'seconds';
+                        //     if (language === 'zh-CN') {
+                        //         yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                        //     } else if (language === 'zh-HK') {
+                        //         yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                        //     }
+                        //     document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        // }
+                    }
+
+                    setInterval(siteTime, 1000);
+                </script>
             
             <br>
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/fanfanSky" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/fanfanSky" class="tooltipped" target="_blank" data-tooltip="GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:jiangf_Sky@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:jiangf_Sky@163.com" class="tooltipped" target="_blank" data-tooltip="邮件" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
 
+<!--  -->
+
+<!--  -->
 
 
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1354124729" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1354124729" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1354124729" class="tooltipped" target="_blank" data-tooltip="QQ: 1354124729" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
 
+<!--  -->
 
 
-
-    <a href="https://www.zhihu.com/people/fang-fan-zhi-meng" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/fang-fan-zhi-meng" data-position="top" data-delay="50">
+    <a href="https://www.zhihu.com/people/fang-fan-zhi-meng" class="tooltipped" target="_blank" data-tooltip="知乎: https://www.zhihu.com/people/fang-fan-zhi-meng" data-position="top" data-delay="50">
         <i class="fab fa-zhihu1">知</i>
     </a>
 
 
-
+<!-- 
     <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fas fa-rss"></i>
     </a>
-
+ -->
 </div>
-        <!-- 又拍云的位置，以div为一个部分 -->
-		<div align=center>
-			<a href="https://www.upyun.com/" target="_blank" title="本站CDN加速/云存储由又拍云提供"> 
-				<img src="./youpaiyun.png" width="5%" />
-			</a>
-		</div>
     </div>
 </footer>
 
@@ -681,8 +752,8 @@
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;站内搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入要搜索的关键词"
                    class="search-input">
         </div>
         <div id="searchResult"></div>
