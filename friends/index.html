@@ -1042,9 +1042,15 @@
 
     
 
-    <div class="container row center-align"
-         style="margin-bottom: 15px !important;">
-        <div class="col s12 m8 l8 copy-right">
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <!-- 访客地图  start -->
+        <div style="width: 15%;float:left;">
+            <a target="_blank" rel="noopener" href="https://clustrmaps.com/site/1bd51" title="访客地图">
+                <img style="width: 100%;" src="/medias/map-visit.png">
+            </a>
+        </div>
+        <!-- 访客地图  end -->
+        <div class="col s12 m8 l8 copy-right" style="float:left;">
             Copyright&nbsp;&copy;
             
                 <span id="year">2021</span>
@@ -1059,10 +1065,10 @@
                 <span><span style='color:#fc5938;'>Cloud storage</span> service and <span style='color:#fc5938;'>CDN</span> acceleration provider</span>
                 <!-- 又拍云的位置 -->
                 <a href="https://www.upyun.com/" target="_blank" title="本站CDN加速/云存储由又拍云提供"> 
-                    <img src="/youpaiyun.png" style="width:7%;vertical-align:middle;" />
+                    <img src="/youpaiyun.png" style="width:8%;vertical-align:middle;" />
                 </a>
             </div>
-            
+            <!-- 
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;
                 Total Words:&nbsp;
                 <span style='color:#fc5938;'>74</span>
@@ -1082,8 +1088,8 @@
                     &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
                         <span id="busuanzi_value_site_uv" style='color:#fc5938;'></span>
                 </span>
-            
-            <br>
+             -->
+            <!-- <br> -->
             <!-- 运行天数提醒. -->
             
                 <span id="sitetime"> Loading ...</span>
@@ -1118,12 +1124,12 @@
 
                         if (startYear == todayYear) {
                         document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "The site has been running for " + "<span style='color:#fc5938;'>"+diffDays+"</span>" + " days " + "<span style='color:#fc5938;'>"+diffHours+"</span>" +
-                                " hours " + "<span style='color:#fc5938;'>"+diffMinutes+"</span>" + " minutes " + "<span style='color:#fc5938;'>"+diffSeconds+"</span>" + " seconds";
+                        document.getElementById("sitetime").innerHTML = "此网站已运行 " + "<span style='color:#fc5938;'>"+diffDays+"</span>" + " 天 " + "<span style='color:#fc5938;'>"+diffHours+"</span>" +
+                                " 小时 " + "<span style='color:#fc5938;'>"+diffMinutes+"</span>" + " 分 " + "<span style='color:#fc5938;'>"+diffSeconds+"</span>" + " 秒";
                         } else {
                             document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                            document.getElementById("sitetime").innerHTML = "The site has been running for " + "<span style='color:#fc5938;'>"+diffYears+"</span>" + " years " + "<span style='color:#fc5938;'>"+diffDays+"</span>" +
-                                " days " + "<span style='color:#fc5938;'>"+diffHours+"</span>" + " hours " + "<span style='color:#fc5938;'>"+diffMinutes+"</span>" + " minutes " +"<span style='color:#fc5938;'>"+ diffSeconds+"</span>" + " seconds";
+                            document.getElementById("sitetime").innerHTML = "此网站已运行 " + "<span style='color:#fc5938;'>"+diffYears+"</span>" + " 年 " + "<span style='color:#fc5938;'>"+diffDays+"</span>" +
+                                " 天 " + "<span style='color:#fc5938;'>"+diffHours+"</span>" + " 小时 " + "<span style='color:#fc5938;'>"+diffMinutes+"</span>" + " 分 " +"<span style='color:#fc5938;'>"+ diffSeconds+"</span>" + " 秒";
                         }
                         
 
@@ -1158,7 +1164,7 @@
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <div style="float:revert;" class="col s12 m4 l4 social-link social-statis">
     <a href="https://github.com/fanfanSky" class="tooltipped" target="_blank" data-tooltip="GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -1345,8 +1351,6 @@ $(function () {
     })();
 </script>
 
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
     
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
