@@ -46,7 +46,8 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Sky.Jiang</span>
+                    <!-- 首页左上角标题名字 -->
+                    <!-- <span class="logo-span">Sky.Jiang</span> -->
                 </a>
             </div>
             
@@ -394,7 +395,42 @@
 
 </header>
 
-    
+    <style>
+    .textsst {
+        padding: 20px;
+        font-size: 1.08rem;
+        font-family: 'Architects Daughter', cursive!important;
+        line-height: 2;
+    }
+    .notices {
+        width: 100%;
+        color: #969696;
+    }
+    .wxgzh {
+        position: relative;
+        top: 0!important;
+    }
+    a {
+        color: #926fec;
+        font-size: 1.08rem;
+        display: inline-block;
+    }
+    .gzh {
+        position: relative;
+    }
+    .gzh img {
+        display: none;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        top: -153px;
+        left: -20px;
+    }
+    .gzh:hover img {
+        display: block;
+    }
+</style>
+
 <style>
     .carousel-control {
         width: 45px;
@@ -436,9 +472,9 @@
     }
 
     /* 使用这个可以将背景图换成背景视频 */
-    /* #index-video { z-index: -1; position: absolute; top: 0; left: 0; height: 100vh; width: 100%; object-fit: cover;}
+    #index-video { z-index: -1; position: absolute; top: 0; left: 0; height: 100vh; width: 100%; object-fit: cover;}
     @media only screen and (max-width: 760px) { #index-video { display: none;}}
-    @media only screen and (min-width: 760px) { .bg-cover { background-image: none!important;}} */
+    @media only screen and (min-width: 760px) { .bg-cover { background-image: none!important;}}
 </style>
 
 
@@ -449,12 +485,12 @@
     <div class="carousel-item red white-text bg-cover about-cover" style="background-color:transparent !important;">
         <div class="container">
             <!-- 首页banner背景图 -->
-            <div class="row">
+            <!-- <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
                 
-                Sky.Jiang
+                    Sky.Jiang
                 
             </div>
 
@@ -491,7 +527,7 @@
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
-
+ -->
             <div class="cover-btns">
                 <a href="#indexCard" class="waves-effect waves-light btn">
                     <i class="fa fa-angle-double-down"></i>开始阅读
@@ -544,14 +580,14 @@
 
     <!-- 添加首页视频背景  start -->
     <!-- 若要恢复banner图片则注释这一段html和css(上面的style)即可 -->
-    <!-- <video id="index-video" autoplay="" loop="" muted=""> -->
+    <video id="index-video" autoplay="" loop="" muted="">
         <!-- 王盈 一直很安静 个人介绍 两视频合并版 -->
-        <!-- <source src="https://txmov2.a.yximgs.com/upic/2021/04/09/22/BMjAyMTA0MDkyMjMwMDhfMTg1ODk2MDg4N180NzUyOTMyMjA4Nl8xXzM=_b_B8e080d7ede19e6674d48a9f12545007b.mp4?pkey=AAVAfNhi5_f-HGkIPXrY5w6nyf4JibwOY-WwdHgSJ2aSoi-2WQLpiYDunLbRZQuESz875eMdsepRlVFtXg9nuQY58uRc-7AsF0kEMNR6QYBj56g9JFFMSGdsoKK2-SV27u8&amp;tag=1-1617978682-xpcwebprofile-0-lcvipceuti-9e40072f87531f1a&amp;clientCacheKey=3xbbtbrfxqpccp4_b.mp4"> -->
+        <source src="https://txmov2.a.yximgs.com/upic/2021/04/09/22/BMjAyMTA0MDkyMjMwMDhfMTg1ODk2MDg4N180NzUyOTMyMjA4Nl8xXzM=_b_B8e080d7ede19e6674d48a9f12545007b.mp4?pkey=AAVAfNhi5_f-HGkIPXrY5w6nyf4JibwOY-WwdHgSJ2aSoi-2WQLpiYDunLbRZQuESz875eMdsepRlVFtXg9nuQY58uRc-7AsF0kEMNR6QYBj56g9JFFMSGdsoKK2-SV27u8&amp;tag=1-1617978682-xpcwebprofile-0-lcvipceuti-9e40072f87531f1a&amp;clientCacheKey=3xbbtbrfxqpccp4_b.mp4">
         <!-- 王盈 一直很安静 视频 -->
-        <!-- <source src="https://txmov2.a.yximgs.com/upic/2021/04/09/21/BMjAyMTA0MDkyMTQyNDRfMTg1ODk2MDg4N180NzUyNjAyMzA0N18xXzM=_b_B83b004b85aba8eca3ded270637616575.mp4"> -->
+        <source src="https://txmov2.a.yximgs.com/upic/2021/04/09/21/BMjAyMTA0MDkyMTQyNDRfMTg1ODk2MDg4N180NzUyNjAyMzA0N18xXzM=_b_B83b004b85aba8eca3ded270637616575.mp4">
         <!-- 王盈 个人介绍 视频 -->
-        <!-- <source src="https://txmov2.a.yximgs.com/upic/2021/04/09/21/BMjAyMTA0MDkyMTU4MDNfMTg1ODk2MDg4N180NzUyNzE0MzkyNV8xXzM=_b_Bf94cee6bd181efeaca64049bd2e4e276.mp4"> -->
-    <!-- </video> -->
+        <source src="https://txmov2.a.yximgs.com/upic/2021/04/09/21/BMjAyMTA0MDkyMTU4MDNfMTg1ODk2MDg4N180NzUyNzE0MzkyNV8xXzM=_b_Bf94cee6bd181efeaca64049bd2e4e276.mp4">
+    </video>
     <!-- 添加首页视频背景  end -->
 
     
@@ -634,12 +670,12 @@
                         <div class="dream">
     
     <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;坚持走下去
     </div>
     
     <div class="row">
         <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+            一般来说，人生迈错了一步，是不能往回倒退的，已经不能重来，但事实上迈错一步未必就是没有了希望，所到之处，皆是路；一路上的荆棘，一定会把我刺得遍体鳞伤，即使你的速度比别人慢了点，坚持，目标会达到的！
         </div>
     </div>
 </div>
@@ -677,11 +713,11 @@
                         
                     
                 </div>
-                <a href="/2021/06/18/firstarticle/">
+                <a href="/2021/06/18/suanfa/">
                     <h3 class="post-title">剑指offer | 数组中重复的数字</h3>
                 </a>
                 <p class="post-description"></p>
-                <a href="/2021/06/18/firstarticle/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
+                <a href="/2021/06/18/suanfa/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -696,11 +732,41 @@
                      -->
                 </div>
             </div>
-            <!-- <div class="card huahuacard">
+            <div class="card huahuacard">
                 <div class="dream">
-                    我很开心 
+                    <div class="row rows">
+                        <div class="notices col ">
+                            <!-- 公告文字栏开始 -->
+                            <div class="textsst">
+                                公告：
+                                <br>
+                                #近况 正式通知大家，我有情况了，很甜，刚开始，这一次，爱与被爱还是没发生 ~ 
+                                <br>                              
+                                #方案 由于时间冲突，把攒了一段时间的文章以超前时间发布了，望周知，别慌，可放心食用 ~ 
+                                <br>
+                                #注意 最近在迁移博客图床，若遇到图片加载缓慢等问题，请多刷新页面或挂载vpn，向观众老爷致歉，望海涵 ~
+                                <br>
+                                #新增 最近新增页面，取名suanfa，算法，拓展算法层面知识，页面链接 <code><a href="/2021/06/18/suanfa/">剑指offer</a></code> ~
+                                <br>
+                                #口号 湖人总冠军，为你千千万万遍，然后露出一脸哈桑式的微笑，页面链接 <code><a href="/lakers-championship/">Lakers championship</a></code> ~
+                                <br>
+                                #资助 维护博客不易，憨憨叹气，小伙伴萌可以给买个馒头吗，卟卟，资助链接 <code><a href="/donate/">资助系统</a></code> ~
+                                <br>
+                                #微信 最近开通了微信公众号，搜索名称：itsNekoDeng博客，扫一扫 
+                                <code class="wxgzh">
+                                    <a class="gzh" href="javascript:;">
+                                        <i>公众号二维码</i>
+                                        <div id="sweep_code">
+                                            <img class="gzhImg" src="/medias/avatar.jpg">
+                                        </div>
+                                    </a>
+                                </code>~ 
+                            </div>
+                            <!-- 公告文字栏结束 -->
+                        </div>
+                    </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
     
@@ -714,7 +780,7 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2021/06/18/firstarticle/">
+                    <a href="/2021/06/18/suanfa/">
                         <div class="card-image">
                             
                             <img src="https://img-blog.csdnimg.cn/20200309120551356.png" class="responsive-img" alt="剑指offer | 数组中重复的数字">
@@ -885,7 +951,7 @@
             <div>
                 <span><span style='color:#fc5938;'>Cloud storage</span> service and <span style='color:#fc5938;'>CDN</span> acceleration provider</span>
                 <!-- 又拍云的位置 -->
-                <a href="https://www.upyun.com/" target="_blank" title="本站CDN加速/云存储由又拍云提供"> 
+                <a href="https://www.upyun.com/" target="_blank" title="本站CDN加速/云存储由又拍云提供" style="display: inline;"> 
                     <img src="/youpaiyun.png" style="width:8%;vertical-align:middle;" />
                 </a>
             </div>
