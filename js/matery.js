@@ -170,3 +170,6 @@ $(function () {
     // 初始化加载 tooltipped.
     $('.tooltipped').tooltip();
 });
+// "\n梦想成为一位优秀的 休闲博主,\n也喜欢逛逛B站的，还有我的知乎: %c https://www.zhihu.com/people/fang-fan-zhi-meng %c","\n\n我的博客地址: https://fanfansky.github.io/\n\n欢迎您的光临！
+console.log("恭喜你看到我啦！\n可以称呼我 %c 小江江 ","color: #fadfa3; background: #030307;padding:5px 0;")
+console.log("梦想成为一位优秀的 休闲博主,\n也喜欢逛逛B站的，还有我的 %c 知乎: %c https://www.zhihu.com/people/fang-fan-zhi-meng ","color: #fadfa3; background: #030307;padding:5px 0;","background: #fadfa3; padding:5px 0;")
